@@ -281,7 +281,7 @@ int printf(const char *fmt, ...) {
   va_start(args, fmt);
   printed = vsprintf(printf_buf, fmt, args);
   va_end(args);
-  print(printf_buf);
+  stdout_print(printf_buf);
   return printed;
 }
 
@@ -314,7 +314,7 @@ int fprintf(FILE* stream, const char* str, ...) {
 }
 
 int asprintf(char **buffer, const char *format, ...) {
-  char* buffer_a[1024];
+  char buffer_a[1024];
   va_list args;
   int out = sprintf(buffer_a, format, args);
   out = strlen(buffer_a)+1;

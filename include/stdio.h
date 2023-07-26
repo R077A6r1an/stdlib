@@ -1,7 +1,6 @@
 #ifndef stdio_std_included
 #define stdio_std_included
 
-#include <Operator/fsdev.h>
 #include <stdarg.h>
 #include <stddef.h>
 
