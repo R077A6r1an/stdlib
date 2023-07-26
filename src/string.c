@@ -37,4 +37,12 @@ int strncmp(const char* s1, const char*s2, size_t num) {
     return 0;
 }
 
+size_t strnlen(const char* str, int len) {
+  size_t size = 0;
+  while(str[size] != '\0' && size != len) {
+    size++;
+  }
+  return size;
+}
+
 //TODO: implement all functions in include/string.h with a comment TODO after its declaration

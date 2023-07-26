@@ -19,7 +19,7 @@ extern int strncmp(const char*, const char*, size_t);
 //extern char* strchr(const char*, int);                          //TODO
 extern void* memset(void*, int, size_t);
 extern size_t strlen(const char*);
-//extern size_t strnlen(const char*, int);                        //TODO
+extern size_t strnlen(const char*, int);
 
 //extern char* strtok(char*, const char*);                        //TODO
 //extern char* strdup(const char*);                               //TODO
