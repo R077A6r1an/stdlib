@@ -15,7 +15,7 @@
  * ('\n'), carriage return ('\r'), horizontal tab ('\t'), and vertical tab ('\v'). In the
  * "C" locale, isspace returns true only for the standard white-space characters.
  */
-extern int isspace(int c);
+extern int isspace(int c);//TODO
 
 /**
  * Description
@@ -27,7 +27,7 @@ extern int isspace(int c);
  * the tolower function returns one of the corresponding characters (always the same one
  * for any given locale); otherwise, the argument is returned unchanged.
  */
-extern int tolower(int c);
+extern int tolower(int c);//TODO
 
 /**
  * Description
