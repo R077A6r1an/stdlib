@@ -190,7 +190,7 @@ int vsprintf(char *buf, const char *fmt, va_list args) {
         }
         continue;
       case 's':
-        s = va_arg(args, char *);
+        s = va_arg(args, char *);//FIXME: by calling fprintf(stdio, "format %s", "String), I get by a unit test a memory runtime error. But only be fprintf.
         len = strnlen(s, precision);
         if (!(flags & LEFT)) {
           while (len < field_width--) {
