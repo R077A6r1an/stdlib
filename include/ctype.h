@@ -3,19 +3,16 @@
 
 #include <stdbool.h>
 
-/*
- * TODO: here are a few functions required.
- * The official ISO specification is as comment placed before the declaration.
- */
-
 /**
  * The isspace function tests for any character that is a standard white-space character or
- * is one of a locale-specific set of characters for which isalnum is false. The standard white-space characters are the
- * following: space (' '), form feed ('\f'), new-line
- * ('\n'), carriage return ('\r'), horizontal tab ('\t'), and vertical tab ('\v'). In the
- * "C" locale, isspace returns true only for the standard white-space characters.
+ * is one of a locale-specific set of characters for which isalnum is false. The standard white-space
+ * characters are the following:
+ * 
+ * space (' '), form feed ('\f'), new-line('\n'), carriage return ('\r'),
+ * horizontal tab ('\t'), and vertical tab ('\v').
+ * In the "C" locale, isspace returns true only for the standard white-space characters.
  */
-extern int isspace(int c);//TODO
+extern int isspace(int c);
 
 /**
  * Description
@@ -27,7 +24,7 @@ extern int isspace(int c);//TODO
  * the tolower function returns one of the corresponding characters (always the same one
  * for any given locale); otherwise, the argument is returned unchanged.
  */
-extern int tolower(int c);//TODO
+extern int tolower(int c);
 
 /**
  * Description
