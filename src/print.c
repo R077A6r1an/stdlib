@@ -190,7 +190,7 @@ int vsprintf(char *buf, const char *fmt, va_list args) {
         }
         continue;
       case 's':
-        s = va_arg(args, char *);//FIXME: by calling fprintf(stdio, "format %s", "String), I get by a unit test a memory runtime error. But only be fprintf.
+        s = va_arg(args, char *);//Solved: by calling fprintf(stdio, "format %s", "String), I got by a unit test a memory runtime error. But solved cause of false stdarg usage.
         len = strnlen(s, precision);
         if (!(flags & LEFT)) {
           while (len < field_width--) {
