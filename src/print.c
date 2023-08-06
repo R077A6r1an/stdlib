@@ -291,7 +291,9 @@ int fprintf(FILE* stream, const char* str, ...) {
   if(str == NULL) {
     return -1;
   }
+  va_start(args, str);
   vsprintf(buffer, str, args);
+  va_end(args)
   if(stream == stdout) {
     stdout_print(buffer);
     return 0;
@@ -316,7 +318,9 @@ int fprintf(FILE* stream, const char* str, ...) {
 int asprintf(char **buffer, const char *format, ...) {
   char buffer_a[1024];
   va_list args;
+  va_start(args, format);
   int out = sprintf(buffer_a, format, args);
+  va_end(args);
   out = strlen(buffer_a)+1;
 #ifdef MALLOC_AVAILABLE
   *buffer = (char*)malloc(out*sizeof(char));
@@ -336,7 +340,9 @@ int asprintf(char **buffer, const char *format, ...) {
 extern int snprintf(char * buffer, size_t size, const char * format, ...) {
   char buffer_a[1024];
   va_list args;
+  va_start(args, format);
   int out = sprintf(buffer_a, format, args);
+  va_end(args);
   for(int i = 0; i < size-1; i++) {
     buffer[i] = buffer_a[i];
   }
