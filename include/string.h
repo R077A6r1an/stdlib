@@ -5,8 +5,8 @@
 
 extern void* memcpy(void*, const void*, size_t);
 //extern void* memmove(void*, const void*, size_t);               //TODO
-//extern char* strcpy(char*, const char*);                        //TODO
-//extern char* strncpy(char*, const char*, size_t);               //TODO
+extern char* strcpy(char*, const char*);                        //TODO
+extern char* strncpy(char*, const char*, size_t);               //TODO
 //extern char* strcat(char*, const char*);                        //TODO
 //extern char* strncat(char*, const char*, size_t);               //TODO
 extern int memcmp(const void*, const void*, size_t);

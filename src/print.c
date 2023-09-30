@@ -293,7 +293,7 @@ int fprintf(FILE* stream, const char* str, ...) {
   }
   va_start(args, str);
   vsprintf(buffer, str, args);
-  va_end(args)
+  va_end(args);
   if(stream == stdout) {
     stdout_print(buffer);
     return 0;

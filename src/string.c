@@ -1,4 +1,5 @@
 #include <stddef.h>
+#include <string.h>
 
 // NOTE: no protection against buffer overflow!
 size_t strlen(const char* str) {
@@ -43,6 +44,22 @@ size_t strnlen(const char* str, int len) {
     size++;
   }
   return size;
+}
+char* strcpy(char* dest, const char* src) {
+  if(!dest || !src) {
+    return NULL;
+  }
+  size_t len = strlen(src) + 1;
+  return (char*)memcpy((void*)dest, (void*)src, len);
+}
+
+char* strncpy(char* dest, const char* src, size_t len) {
+  if(!dest || !src || !len) {
+    return NULL;
+  }
+  char* out = memcpy((void*)dest, (void*)src, len);
+  dest[len] = '\0';
+  return out;
 }
 
 //TODO: implement all functions in include/string.h with a comment TODO after its declaration
